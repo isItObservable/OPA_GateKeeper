@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: gatekeeper-metrics
+spec:
+  internalTrafficPolicy: Cluster
+  ports:
+    - port: 8888
+      name: metrics
+      protocol: TCP
+      targetPort: metrics
+  selector:
+    app: gatekeeper
+    chart: gatekeeper
+    control-plane: controller-manager
+    gatekeeper.sh/operation: webhook
+    gatekeeper.sh/system: "yes"
+    heritage: Helm
+    release: gatekeeper
+  type: ClusterIP

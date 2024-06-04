@@ -1,0 +1,17 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sContainerRequests
+metadata:
+  name: container-must-have-requests
+spec:
+  match:
+    kinds:
+      - apiGroups: [""]
+        kinds: ["Pod"]
+    namespaceSelector:
+      matchExpressions:
+        - key: type
+          operator: In
+          values: [ "app" ]
+  parameters:
+    cpu: "200m"
+    memory: "1Gi"
