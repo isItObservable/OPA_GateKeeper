@@ -1,7 +1,7 @@
 # Is it Observable
 <p align="center"><img src="/image/logo.png" width="40%" alt="Is It observable Logo" /></p>
 
-## Episode : Opa Gatekeeper
+## Episode : OPAGatekeeper
 <p align="center"><img src="/image/opa-no-text-color.png" width="40%" alt="Opa Gatekeeper" /></p>
 This repository contains the files utilized during the tutorial presented in the dedicated IsItObservable episode explaining how to create Security Policies using OPA Gatekeeper.
 
@@ -101,8 +101,8 @@ export PATH=$PWD/bin:$PATH
 
 ### 4.Clone Github repo
 ```shell
-git clone https://github.com/isitobservable/OpaGatekeeper
-cd OpaGatekeeper
+git clone https://github.com/isitobservable/OPA_Gatekeeper
+cd OPA_Gatekeeper
 ```
 
 ### 5. Deploy most of the components for The collector
